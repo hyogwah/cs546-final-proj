@@ -1,0 +1,23 @@
+<link href='/public/css/contact.css' rel='stylesheet' />
+
+<h2>Hey! Here is the following information for the appointment you would like to book:</h2>
+
+<h3>You booked your appointment with: </h3><p>{{hairdresser}}</p>
+<h3>The service will start on:</h3><p>{{timeFormat}}</p>
+<h3>Type of service: </h3><p>{{service}}</p>
+<h3>Any comments you made: </h3><p>{{comments}}</p>
+<h3>The appointment will cost:</h3><p>${{price}}. Pay when you get here!</p>
+<h3>You used discount code: {{discount}}!</h3>
+
+
+<form id="finalizationForm" action="/appointments/confirmation" method="POST">
+
+        <input type="string" name="hairdresserId" value="{{hairdresserId}}" hidden>
+		<input type="string" name="timeLiteralStart" value="{{timeLiteralStart}}" hidden>
+		<input type="string" name="timeLiteralEnd" value="{{timeLiteralEnd}}" hidden>
+        <input type="string" name="service" value="{{service}}" hidden>
+        <input type="string" name="comments" value="{{comments}}" hidden>
+        <input type="string" name="price" value="{{price}}" hidden>
+        <br><br><br>
+		<button type="submit">Submit Appointment</button>
+</form>

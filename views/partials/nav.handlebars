@@ -1,0 +1,6 @@
+  <nav class='navbar'>
+    {{#each partials.navItems}}
+      <a href='{{navLink}}'>{{navTitle}}</a>
+    {{/each}}
+    {{>login_status}}
+  </nav>

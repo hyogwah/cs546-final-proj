@@ -1,0 +1,36 @@
+<link href='/public/css/appointhist.css' rel='stylesheet' />
+<div>
+  <div id='appointment-table'>
+    {{noAppointmentsNotif}}<br><br>
+    {{#each appointmentParser}}
+      <div class='appointment'>
+        <h3>This is the information for the appointment booked for:
+          {{dateAlone}}</h3>
+        <table>
+          <tr>
+            <th>Your Customer</th>
+            <td>{{hairdresserName}}</td>
+          </tr>
+          <tr>
+            <th>Start Time</th>
+            <td>{{startTime}}</td>
+          </tr>
+          <tr>
+            <th>Finish Time</th>
+            <td>{{endTime}}</td>
+          </tr>
+          <tr>
+            <th>Service Type</th>
+            <td>{{service}}</td>
+          </tr>
+          <tr>
+            <th>Price (USD)</th>
+            <td>${{price}}</td>
+
+          </tr>
+        </table>
+        <p>Comments they had when booking: {{comments}}</p>
+      </div>
+    {{/each}}
+  </div>
+</div>
